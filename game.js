@@ -75,6 +75,10 @@ function checkAnswer(currentLevel)
                 gameStarted = false;
                 level = 0;
                 gamePattern = [];
+                $("body").addClass("game-win");
+            setTimeout(function() {
+                $("body").removeClass("game-win");
+            }, 200);
                 $("h1").text("You won! Press Any Keyboard Key to Restart!");
             }else{
             //5. Call nextSequence() after a 1000 millisecond delay.
